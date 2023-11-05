@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
 const FeaturedFoods = () => {
     const [foods, setFoods] = useState([]);
 
-
+    useEffect( () => {
+        fetch('http://localhost:5000/featured-foods')
+        .then(res => res.json())
+        .then(data => setFoods(data))
+    }, [])
     return (
         <div>
             <div className="grid px-5 md:p-0 md:grid-cols-2 gap-5 max-w-7xl mx-auto mb-4 mt-10">
