@@ -83,7 +83,7 @@ const FoodDetails = () => {
           </form>
           </div>
           <div>
-            <form className="">
+            <form>
                 <div className="flex justify-between items-center">
                     <div>
                     <h1 className="text-4xl font-bold mb-2 text-gray-500">Make a request for food!!</h1>
