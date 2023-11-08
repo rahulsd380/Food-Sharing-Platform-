@@ -4,6 +4,8 @@ import { FaSquareFacebook } from "react-icons/fa6";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import Navbar from "../Navbar/Navbar";
+import toast, { Toaster } from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 
 const SignUp = () => {
@@ -35,24 +37,35 @@ const SignUp = () => {
         const confirmPassword = e.target.confirmPassword.value;
         console.log(firstName, lastName, email, gender, phone, photo, password, confirmPassword);
 
+        const toastId = toast.loading("Signing up...")
+
         signUp(email, password)
-        .then(res => {
-            console.log(res.user);
+        .then(result => {
+            console.log(result.user);
+            if(result.user){
+              toast.success('Signed up successfully.', { id: toastId})
+              navigate(location ?.state ? location.state : '/');
+              }
         })
         .catch(error => {
             console.log(error.message);
+            toast.error(error.message, {id: toastId})
         })
     }
 
 
 
     return (
-        <div className="max-w-6xl mx-auto">
+        <div>
           <Navbar></Navbar>
+            <div className="max-w-6xl mx-auto">
+            <Helmet>
+              <title>Food For Life | Sign Up</title>
+          </Helmet>
             <div className="flex py-10">
             <div>
                 <div className="h-full bg-blue-800 p-6 flex justify-center items-center rounded-l-2xl">
-                    <h1 className="text-3xl font-semibold">Welsome To <br /> Rahul</h1>
+                    <h1 className="text-3xl font-semibold text-white">Welsome To <br /> Food For Life</h1>
                 </div>
             </div>
             <form onSubmit={handleSignUp} className="bg-slate-100 p-10 md:p-20 rounded-r-2xl">
@@ -251,6 +264,12 @@ const SignUp = () => {
         </form>
         
             
+
+            </div>
+            <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
 
             </div>
         </div>

@@ -1,12 +1,16 @@
 import { MdProductionQuantityLimits, MdDateRange, MdLocationOn } from "react-icons/md";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const AvailableFoodsCard = ({food}) => {
     const {_id, food_Img, food_name, donator_img, donator_name,food_quantity, location, expired_date, description} = food;
-    console.log(food);
     return (
         <div className="">
-            <div className="flex gap-5 mb-4 mr-4 bg-gray-50 border border-blue-300 transition duration-300 cursor-pointer rounded-md w-auto p-5">
+            <div data-aos="fade-up"
+     data-aos-duration="1000" className="flex gap-5 mb-4 mr-4 bg-gray-50 border border-blue-300 transition duration-300 cursor-pointer rounded-md w-auto p-5">
                 <div className="bg-blue-100 p-2 rounded-md flex items-center">
                 <img className="w-52" src={food_Img} alt="" />
                 </div>

@@ -4,6 +4,9 @@ import { FaSquareFacebook } from "react-icons/fa6";
 import { AiOutlineIssuesClose } from "react-icons/ai";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
+import Navbar from "../Navbar/Navbar";
 
 const Login = () => {
     const {login, googleSignUp} = useContext(AuthContext);
@@ -15,12 +18,19 @@ const Login = () => {
         const password = e.target.password.value;
         console.log(email, password);
 
+        const toastId = toast.loading("Login in...")
+
         login(email, password)
-        .then(res => {
-            console.log(res.user);
+        .then(result => {
+            console.log(result.user);
+            if(result.user){
+              toast.success('Looed In Successfully.', { id: toastId})
+              navigate(location ?.state ? location.state : '/');
+              }
         })
         .catch(error => {
             console.log(error.message);
+            toast.error(error.message, {id: toastId})
         })
         
     }
@@ -40,7 +50,12 @@ const Login = () => {
 
 
     return (
-        <div className="max-w-6xl mx-auto py-20">
+        <div>
+          <Navbar></Navbar>
+            <div className="max-w-6xl mx-auto py-10">
+            <Helmet>
+              <title>Food For Life | Login</title>
+          </Helmet>
             <div className="flex">
             <div>
                 <div className="h-full bg-blue-800 p-6 flex justify-center items-center rounded-l-2xl">
@@ -52,12 +67,6 @@ const Login = () => {
                 <p className="mb-7">Sign In to visit your account!!</p>
             <div className="grid grid-cols-1 gap-5">
             
-
-
-
-      
-
-
 
       <div className="relative h-11 w-full">
         <input
@@ -190,6 +199,11 @@ const Login = () => {
         </div>
             </form>
 
+            </div>
+            <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
             </div>
         </div>
     );

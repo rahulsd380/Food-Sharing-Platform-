@@ -1,4 +1,4 @@
-import { FaAngleDown, FaBell } from "react-icons/fa6";
+import { FaBell } from "react-icons/fa6";
 import { BsFillCartCheckFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useContext } from "react";

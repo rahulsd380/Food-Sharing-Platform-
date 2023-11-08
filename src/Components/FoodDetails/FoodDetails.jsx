@@ -1,13 +1,52 @@
 import { Link, useLoaderData } from "react-router-dom";
 import SideDrawer from "../SideDrawer/SideDrawer";
 import { MdProductionQuantityLimits, MdDateRange, MdLocationOn } from "react-icons/md";
+import toast, { Toaster } from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
+import { useContext } from "react";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 
 const FoodDetails = () => {
     const allFoods = useLoaderData()
     const {_id, food_Img, food_name, donator_img, donator_name,food_quantity, location, expired_date, description} = allFoods;
+
+    const {user} = useContext(AuthContext)
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const aditionalNotes = e.target.aditionalNotes.value;
+        const amount = e.target.amount.value;
+        const userName = user.displayName;
+        const userImage = user.photoURL;
+        const userEmail = user.email;
+        const userPhoneNumber = user.phoneNumber;
+
+
+
+        const requestedData = {food_Img, food_name, donator_img, donator_name,food_quantity, location, expired_date, description, aditionalNotes, amount, userName, userEmail, userImage, userPhoneNumber};
+        const toastId = toast.loading("Adding...")
+        fetch('https://food-sharing-server-three.vercel.app/requested-food', {
+            method : "POST",
+            headers : {
+                'content-type' : 'application/json'
+            },
+            body : JSON.stringify(requestedData)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                toast.success('Food Added Successfully.', { id: toastId})
+                }
+        })
+    }
     return (
         <div className="">
+            <Helmet>
+              <title>Food For Life | Food Details</title>
+          </Helmet>
             <div className="absolute px-10 mt-5 flex gap-5 items-center">
                 <SideDrawer></SideDrawer>
                 <img className="w-52" src="/src/assets/images/logo.png" alt="" />
@@ -83,7 +122,7 @@ const FoodDetails = () => {
           </form>
           </div>
           <div>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className="flex justify-between items-center">
                     <div>
                     <h1 className="text-4xl font-bold mb-2 text-gray-500">Make a request for food!!</h1>
@@ -152,7 +191,7 @@ const FoodDetails = () => {
                     </div>
                     <div>
                         <h1 className="font-semibold mb-2 text-left text-gray-500">Donation Amount</h1>
-                        <input type="text" name="chef" placeholder="Enter Amount" className="border border-blue-300 p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out text-gray-700" />
+                        <input type="text" name="amount" placeholder="Enter Amount" className="border border-blue-300 p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out text-gray-700" />
 
                     </div>
                 </div>
@@ -161,7 +200,7 @@ const FoodDetails = () => {
             <div className="grid md:grid-cols-2 gap-8 mb-2">
                     <div>
                         <h1 className="font-semibold mb-2 text-left text-gray-500">Aditional Notes</h1>
-                        <input type="text" name="name" className="border border-blue-300 p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out text-gray-600" value={description}/>
+                        <input type="text" name="aditionalNotes" className="border border-blue-300 p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out text-gray-600" value={description}/>
                     </div>
                     <div>
                         <h1 className="font-semibold mb-2 text-left text-gray-500">Quantity</h1>
@@ -183,13 +222,17 @@ const FoodDetails = () => {
     </div>
             </div>
 
-                <Link to={"/signup"} className="flex items-center justify-center rounded-md focus:outline-none h-12 px-5 text-center border border-gray-600 hover:bg-blue-800 hover:text-white font-semibold  transition duration-300">
+                <Link to={"/availableFoods"} className="flex items-center justify-center rounded-md focus:outline-none h-12 px-5 text-center border border-gray-600 hover:bg-blue-800 hover:text-white font-semibold  transition duration-300">
               Browse More
             </Link>
                 </div>
 
                 </div>
             </div>
+            <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
         </div>
     );
 };
