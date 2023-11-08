@@ -49,7 +49,7 @@ const FoodDetails = () => {
           </Helmet>
             <div className="absolute px-10 mt-5 flex gap-5 items-center">
                 <SideDrawer></SideDrawer>
-                <img className="w-52" src="/src/assets/images/logo.png" alt="" />
+                <img className="w-52" src="https://i.ibb.co/vwcfhFW/logo.png" alt="" />
             </div>
             <div className="grid md:grid-cols-2 gap-10">
                 <div className="flex justify-center items-center mt-10">

@@ -17,7 +17,7 @@ const ApplyForVolunteer = () => {
             </div>
 
             <div  className="relative" data-aos="fade-right" data-aos-duration="3000">
-                <img className="w-full rounded-lg" src="/src/assets/images/aboutus.png " alt="" />
+                <img className="w-full rounded-lg" src="https://i.ibb.co/ssw3T1M/aboutus.png" alt="" />
             </div>
 
         </div>

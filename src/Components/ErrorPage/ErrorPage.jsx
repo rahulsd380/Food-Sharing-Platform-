@@ -9,7 +9,7 @@ const ErrorPage = () => {
               <title>Food For Life | Error</title>
           </Helmet>
             <div className="flex justify-center">
-                <img className="w-3/6" src="/src/assets/images/error-page.png" alt="" />
+                <img className="w-3/6" src="https://i.ibb.co/hY6t5Vc/error-page.png" alt="" />
             </div>
 
             <div className="flex justify-center">

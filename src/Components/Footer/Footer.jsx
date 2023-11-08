@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="bg-gray-700">
       <footer className="footer p-10 text-base-content">
         <aside>
-          <img className="w-56" src="/src/assets/images/logo.png" alt="" />
+          <img className="w-56" src="https://i.ibb.co/H20ksH2/food-for-life-logo.png" alt="" />
           <p className="text-white font-semibold">
             <span className="text-xl">Food For Life</span>
             <br />

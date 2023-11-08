@@ -45,7 +45,7 @@ const Navbar = () => {
         <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-10 gap-8 items-center">
         <SideDrawer></SideDrawer>
-        <img className="w-32" src="/src/assets/images/food-for-life-logo.png" alt="" />
+        <img className="w-32" src="https://i.ibb.co/H20ksH2/food-for-life-logo.png" alt="" />
 
 
         <div className="flex col-span-5 items-center">

@@ -100,7 +100,7 @@ export default class PreviousNextMethods extends Component {
 <div className="bg-white border rounded-lg p-4 hover:border-blue-800 transition duration-300 cursor-pointer">
                 <div>
                     <div className="relative flex justify-center items-center rounded-lg p-3">
-                        <img className="mb-5 h-44 rounded-lg" src="/assets/images/team/1.jpg" alt="" />
+                        <img className="mb-5 h-44 rounded-lg" src="https://i.ibb.co/wcqcdZ8/1.png" alt="" />
                     </div>
                     <h1 className="text-xl font-bold mb-3 text-center">Car Engine Plug</h1>
                     <p className="font-semibold text-gray-500 text-center">Engine Expert</p>
@@ -120,7 +120,7 @@ export default class PreviousNextMethods extends Component {
 <div className="bg-white border rounded-lg p-4 hover:border-blue-800 transition duration-300 cursor-pointer">
                 <div>
                     <div className="relative flex justify-center items-center rounded-lg p-3">
-                        <img className="mb-5 h-44 rounded-lg" src="/assets/images/team/2.jpg" alt="" />
+                        <img className="mb-5 h-44 rounded-lg" src="https://i.ibb.co/JsKrPH1/2.png" alt="" />
                     </div>
                     <h1 className="text-xl font-bold mb-3 text-center">Car Engine Plug</h1>
                     <p className="font-semibold text-gray-500 text-center">Engine Expert</p>
@@ -140,7 +140,7 @@ export default class PreviousNextMethods extends Component {
 <div className="bg-white border rounded-lg p-4 hover:border-blue-800 transition duration-300 cursor-pointer">
                 <div>
                     <div className="relative flex justify-center items-center rounded-lg p-3">
-                        <img className="mb-5 h-44 rounded-lg" src="/assets/images/team/2.jpg" alt="" />
+                        <img className="mb-5 h-44 rounded-lg" src="https://i.ibb.co/R72yqf4/3.png" alt="" />
                     </div>
                     <h1 className="text-xl font-bold mb-3 text-center">Car Engine Plug</h1>
                     <p className="font-semibold text-gray-500 text-center">Engine Expert</p>

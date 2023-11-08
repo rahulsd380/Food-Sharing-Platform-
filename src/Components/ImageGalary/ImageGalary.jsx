@@ -21,61 +21,61 @@ export default class AutoPlay extends Component {
         <h2 className="text-3xl font-bold mb-7 dark:text-blue-500">Please Help Us!!</h2>
         </div>
         <Slider {...settings}>
-            
+
           <div>
-            <img className="px-2 w-5/6" src="/src/assets/images/Image-Galary/1.jpg" alt="" />
+            <img className="px-2 w-5/6" src="https://i.ibb.co/HP5q4Rk/1.jpg" alt="" />
           </div>
 
           <div>
-          <img className="px-2 w-5/6" src="/src/assets/images/Image-Galary/2.jpg" alt="" />
+          <img className="px-2 w-5/6" src="https://i.ibb.co/qxzKtpP/2.jpg" alt="" />
           </div>
 
           <div>
-          <img className="px-2 w-5/6" src="/src/assets/images/Image-Galary/3.jpg" alt="" />
+          <img className="px-2 w-5/6" src="https://i.ibb.co/k1P5QVt/3.jpg" alt="" />
           </div>
 
           <div>
-          <img className="px-2 w-5/6" src="/src/assets/images/Image-Galary/4.jpg" alt="" />
+          <img className="px-2 w-5/6" src="https://i.ibb.co/VNK4RDF/4.jpg" alt="" />
           </div>
 
           <div>
-          <img className="px-2 w-5/6" src="/src/assets/images/Image-Galary/5.jpg" alt="" />
+          <img className="px-2 w-5/6" src="https://i.ibb.co/S5Dhkt7/5.jpg" alt="" />
           </div>
 
           <div>
-          <img className="px-2 w-5/6" src="/src/assets/images/Image-Galary/6.jpg" alt="" />
+          <img className="px-2 w-5/6" src="https://i.ibb.co/1dNmLsP/6.jpg" alt="" />
           </div>
 
           <div>
-            <img className="px-2 w-5/6" src="/src/assets/images/Image-Galary/7.jpg" alt="" />
+            <img className="px-2 w-5/6" src="https://i.ibb.co/WFYQdnq/7.jpg" alt="" />
           </div>
 
           <div>
-          <img className="px-2 w-5/6" src="/src/assets/images/Image-Galary/8.jpg" alt="" />
+          <img className="px-2 w-5/6" src="https://i.ibb.co/B4sqRM1/8.jpg" alt="" />
           </div>
 
           <div>
-          <img className="px-2 w-5/6" src="/src/assets/images/Image-Galary/9.jpg" alt="" />
+          <img className="px-2 w-5/6" src="https://i.ibb.co/kcG9rxL/9.jpg" alt="" />
           </div>
 
           <div>
-          <img className="px-2 w-5/6" src="/src/assets/images/Image-Galary/10.jpg" alt="" />
+          <img className="px-2 w-5/6" src="https://i.ibb.co/fGqznnG/10.jpg" alt="" />
           </div>
 
           <div>
-          <img className="px-2 w-5/6" src="/src/assets/images/Image-Galary/11.jpg" alt="" />
+          <img className="px-2 w-5/6" src="https://i.ibb.co/6rhXVLp/11.jpg" alt="" />
           </div>
 
           <div>
-          <img className="px-2 w-5/6" src="/src/assets/images/Image-Galary/12.jpg" alt="" />
+          <img className="px-2 w-5/6" src="https://i.ibb.co/mBr6dF2/12.jpg" alt="" />
           </div>
 
           <div>
-          <img className="px-2 w-5/6" src="/src/assets/images/Image-Galary/13.jpg" alt="" />
+          <img className="px-2 w-5/6" src="https://i.ibb.co/5np85ys/13.jpg" alt="" />
           </div>
 
           <div>
-          <img className="px-2 w-5/6" src="/src/assets/images/Image-Galary/14.jpg" alt="" />
+          <img className="px-2 w-5/6" src="https://i.ibb.co/txsry5f/14.jpg" alt="" />
           </div>
 
         </Slider>

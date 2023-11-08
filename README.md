@@ -3,7 +3,7 @@
 Welcome to my client-side project! This project is based on a food donation organization who helps the poor helpless and foodless people.
 
 ## Live Link
-You can access the live version of this project here: [View Site](https://brand-shop-82443.web.app/)
+You can access the live version of this project here: [View Site](https://food-sharing-b4e8a.web.app/)
 
 ## Project Description
 

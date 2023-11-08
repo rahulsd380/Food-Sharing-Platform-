@@ -60,7 +60,7 @@ export default class PreviousNextMethods extends Component {
             </div>
             </div>
               <img data-aos="fade-down"
-     data-aos-duration="2000" className="w-2/5" src="/src/assets/images/Untitled-1.png" alt="" />
+     data-aos-duration="2000" className="w-2/5" src="https://i.ibb.co/zFwghCj/Untitled-1.png" alt="" />
             
 
             </div>
@@ -95,7 +95,7 @@ export default class PreviousNextMethods extends Component {
             </div>
             </div>
               <img data-aos="fade-down"
-     data-aos-duration="2000" className="w-2/5" src="/src/assets/images/Untitled-1.png" alt="" />
+     data-aos-duration="2000" className="w-2/5" src="https://i.ibb.co/zFwghCj/Untitled-1.png" alt="" />
             
 
             </div>
@@ -130,7 +130,7 @@ export default class PreviousNextMethods extends Component {
             </div>
             </div>
               <img data-aos="fade-down"
-     data-aos-duration="2000" className="w-2/5" src="/src/assets/images/Untitled-1.png" alt="" />
+     data-aos-duration="2000" className="w-2/5" src="https://i.ibb.co/zFwghCj/Untitled-1.png" alt="" />
             
 
             </div>

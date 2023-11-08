@@ -20,7 +20,7 @@ const MyyyMap = () => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-10 items-center'>
             <div>
-                <img className='w-5/6' src="/src/assets/images/location.png" alt="" />
+                <img className='w-5/6' src="https://i.ibb.co/hs576QV/location.png" alt="" />
             </div>
            <div className='max-w-6xl mx-auto' style={{ height: '400px', width: '400px' }}>
       <GoogleMapReact
