@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { RiDeleteBin4Fill } from "react-icons/ri";
 import { useLoaderData } from "react-router-dom";
 
 
 const SingleFood = () => {
     const foods = useLoaderData();
     const [isAvailable, setIsAvailable] = useState(true);
-    const {location, foodName, foodImage,quantity, expireDate, notes, donarName, donarImage, status, donarEmail} = foods;
+    const { location, foodName, foodImage,quantity, expireDate, notes, donarName, donarImage, donarEmail} = foods;
     console.log(location, foodName);
 
     const toggleAvailability = () => {
@@ -49,14 +50,14 @@ const SingleFood = () => {
         {isAvailable ? <div className="bg-white border rounded-md px-2 py-1">
                         <p className="text-sm font-semibold text-green-600">Available</p>
                     </div> : <div className="bg-white border rounded-md px-2 py-1">
-                        <p className="text-sm font-semibold text-red-600">Booked</p>
+                        <p className="text-sm font-semibold text-red-600">Delivered</p>
                     </div>}
       </button>
 
 
                     
 
-                    <button onClick={() => handleDelete(_id)} className="flex items-center gap-2 bg-white border rounded-md px-2 py-1">
+                    <button className="flex items-center gap-2 bg-white border rounded-md px-2 py-1">
                         <RiDeleteBin4Fill className="text-red-600"></RiDeleteBin4Fill>
                         <p className="text-base">Cancel request</p>
                     </button>

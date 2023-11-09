@@ -6,7 +6,7 @@ import { CgProfile, CgLogOut, CgLogIn } from "react-icons/cg";
 import { AiOutlineUserAdd, AiFillHome, AiOutlineAppstoreAdd } from "react-icons/ai";
 import { MdEventAvailable, MdManageHistory } from "react-icons/md";
 import { VscGitPullRequestGoToChanges } from "react-icons/vsc";
-import { BsFillSunFill, BsMoonStarsFill } from 'react-icons/bs';
+import { BsFillSunFill, BsMoonStarsFill, BsSearch } from 'react-icons/bs';
 import { FaPeopleGroup } from "react-icons/fa6";
 
 const Drawer = ({ isOpen, toggleDrawer }) => {
@@ -63,6 +63,15 @@ useEffect( () => {
           <button onClick={changeTheme}>
             <BsMoonStarsFill className="text-blue-800 text-2xl dark:text-yellow-300"></BsMoonStarsFill>
           </button>
+      </div>
+
+      <div className='px-3 mt-5 md:hidden'>
+      <div className="flex">
+                    <input className="rounded-l-md border-t-2 border-b-2 border-l-2 bg-white h-12 px-5 text-sm focus:outline-none focus:border-indigo-500 transition duration-300 ease-in-out hover:border-indigo-300 w-full" type="text"  placeholder="Find Categories" />
+                    <button className="dark:bg-blue-500 rounded-r-md focus:outline-none h-12 px-4 bg-blue-800 text-white font-semibold hover:bg-blue-600 transition duration-300">
+                        <BsSearch></BsSearch>
+                    </button>
+                </div>
       </div>
       <div className="p-4 flex flex-col">
         {

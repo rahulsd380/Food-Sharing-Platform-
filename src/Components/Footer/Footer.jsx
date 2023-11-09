@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="bg-gray-700">
       <footer className="footer p-10 text-base-content">
         <aside>
-          <img className="w-56" src="https://i.ibb.co/H20ksH2/food-for-life-logo.png" alt="" />
+          <img className="w-56" src="https://i.ibb.co/Q8DS1Xf/food-for-life-logo.png" alt="" />
           <p className="text-white font-semibold">
             <span className="text-xl">Food For Life</span>
             <br />
@@ -18,15 +18,15 @@ const Footer = () => {
         <nav className="text-white">
           <header className="footer-title">About</header>
           <a className="link link-hover">Home</a>
-          <a className="link link-hover">Service</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
+          <a className="link link-hover">All Foods</a>
+          <a className="link link-hover">Add Food</a>
+          <a className="link link-hover">Volunteers</a>
         </nav>
         <nav className="text-white">
           <header className="footer-title">Company</header>
-          <a className="link link-hover">Why my car</a>
+          <a className="link link-hover">Why Food For Life</a>
           <a className="link link-hover">Contracts</a>
-          <a className="link link-hover">Jobs</a>
+          <a className="link link-hover">Team</a>
           <a className="link link-hover">Press kit</a>
         </nav>
         <nav className="text-white">
@@ -51,7 +51,7 @@ const Footer = () => {
       </footer>
       <hr />
       <br />
-      <div className="grid grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0">
             <div className="flex gap-6 justify-center mt-4">
                         <button className="w-9 h-9 rounded-full bg-blue-700 text-white flex justify-center items-center transform duration-300 hover:bg-blue-500 "><FaFacebookF></FaFacebookF></button>
                         <button className="w-9 h-9 rounded-full bg-blue-500 text-white flex justify-center items-center transform duration-300 hover:bg-blue-700 "><FaTwitter></FaTwitter></button>
@@ -60,7 +60,7 @@ const Footer = () => {
                     </div>
 
 
-                    <div className="flex gap-5">
+                    <div className="flex justify-center gap-5">
                       <Link className="bg-gray-500 p-2 rounded-md flex items-center gap-2 text-white">
                           <BiLogoPlayStore className="text-4xl"></BiLogoPlayStore>
                           <div>
@@ -80,7 +80,7 @@ const Footer = () => {
 
 
 
-                    <div className="flex gap-3 items-center text-white text-5xl">
+                    <div className="flex gap-3 justify-center items-center text-white text-5xl">
                           <Link><FaCcPaypal></FaCcPaypal></Link>
                           <Link><FaCcStripe></FaCcStripe></Link>
                           <Link><FaCcVisa></FaCcVisa></Link>

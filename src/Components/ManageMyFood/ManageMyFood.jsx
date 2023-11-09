@@ -4,6 +4,7 @@ import ManageMyFoodCard from "./ManageMyFoodCard";
 import Swal from "sweetalert2";
 import { GrSettingsOption } from "react-icons/gr";
 import Navbar2 from "../Navbar/Navbar2";
+import NewNavbar from "../NewNavbar/NewNavbar";
 
 const ManageMyFood = () => {
     const [manageFood, setManageFood] = useState([]);
@@ -50,8 +51,9 @@ const ManageMyFood = () => {
  
 
     return (
+       <div>
+             <NewNavbar></NewNavbar>
         <div className="max-w-6xl mx-auto">
-            <Navbar2></Navbar2>
             <div className="flex items-center gap-5 mt-6">
                 <GrSettingsOption className="text-2xl font-bold text-blue-800"></GrSettingsOption>
                 <h1 className="text-3xl font-bold">Manage Your Foods</h1>
@@ -62,6 +64,7 @@ const ManageMyFood = () => {
             }
         </div>
         </div>
+       </div>
         
     );
 };

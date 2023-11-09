@@ -1,9 +1,9 @@
 import toast, { Toaster } from "react-hot-toast";
-import Navbar from "../Navbar/Navbar";
 import { BiAddToQueue } from "react-icons/bi";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { Helmet } from "react-helmet-async";
+import NewNavbar from "../NewNavbar/NewNavbar";
 
 
 const VolunteerApply = () => {
@@ -43,11 +43,12 @@ const VolunteerApply = () => {
     }
 
     return (
+          <div>
+            <NewNavbar></NewNavbar>
         <div className="max-w-6xl mx-auto">
           <Helmet>
               <title>Food For Life | Apply For Volunteer</title>
           </Helmet>
-          <Navbar></Navbar>
             <div className="flex py-10 md:px-16">
             <form onSubmit={handleSubmit} className="dark:bg-gray-800 bg-slate-100 p-10 md:p-10 rounded-r-2xl">
                 <h1 className="text-4xl font-bold mb-2 flex items-center gap-4"><BiAddToQueue></BiAddToQueue> Apply to become a volunteer</h1>
@@ -188,6 +189,7 @@ const VolunteerApply = () => {
   reverseOrder={false}
 />
         </div>
+          </div>
         
     );
 };

@@ -40,8 +40,8 @@ const ManageMyFoodCard = ({food, handleDelete}) => {
             quantity: quantity,
             Date: expireDate,
             operations : <div className="flex gap-5">
-                <Link to={`aditionalFood/editFood/${_id}`} className="">Update</Link>
-                <Link to={`manageFood/singleFood/${_id}`} className="">Manage Food</Link>
+                <Link to={`/manageFood/editFood/${_id}`} className="">Update</Link>
+                <Link to={`/manageFood/singleFood/${_id}`} className="">Manage Food</Link>
                 <button onClick={()=> handleDelete(_id)} className="">Delete</button>
             </div>
         },

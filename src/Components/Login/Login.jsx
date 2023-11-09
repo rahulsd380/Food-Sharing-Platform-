@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
 import { Helmet } from "react-helmet-async";
-import Navbar from "../Navbar/Navbar";
+import NewNavbar from "../NewNavbar/NewNavbar";
 
 const Login = () => {
     const {login, googleSignUp} = useContext(AuthContext);
@@ -51,7 +51,7 @@ const Login = () => {
 
     return (
         <div>
-          <Navbar></Navbar>
+          <NewNavbar></NewNavbar>
             <div className="max-w-6xl mx-auto py-10">
             <Helmet>
               <title>Food For Life | Login</title>

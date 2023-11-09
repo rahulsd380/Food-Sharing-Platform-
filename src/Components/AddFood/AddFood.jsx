@@ -4,6 +4,7 @@ import { BiAddToQueue } from "react-icons/bi";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { Helmet } from "react-helmet-async";
+import NewNavbar from "../NewNavbar/NewNavbar";
 
 
 const AddFood = () => {
@@ -47,7 +48,7 @@ const AddFood = () => {
 
     return (
         <div>
-          <Navbar></Navbar>
+          <NewNavbar></NewNavbar>
           <div className="max-w-6xl mx-auto">
           <Helmet>
               <title>Food For Life | Add Food</title>

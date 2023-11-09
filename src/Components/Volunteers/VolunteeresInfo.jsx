@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import VolunteersInfoCard from "./VolunteersInfoCard";
 import Navbar from "../Navbar/Navbar";
+import NewNavbar from "../NewNavbar/NewNavbar";
 
 
 const VolunteeresInfo = () => {
@@ -17,7 +18,7 @@ const VolunteeresInfo = () => {
       }, []);
     return (
         <div>
-            <Navbar></Navbar>
+            <NewNavbar></NewNavbar>
            <div className="max-w-6xl mx-auto">
            <div className="bg-blue-900 py-2 mt-10 mb-5 rounded-3xl">
                 <h1 className="text-3xl text-white font-bold text-center">Our Volunteers</h1>

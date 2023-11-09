@@ -10,7 +10,7 @@ You can access the live version of this project here: [View Site](https://food-s
 At Food For Life, we are on a mission to make a meaningful difference in the lives of those who are in need. We understand that access to nutritious food is a basic human right, and we're dedicated to ensuring that no one in our community goes to bed hungry. Our organization is committed to helping the poor, helpless, and foodless people who are struggling to put food on their tables.
 
 ## Features
-
+- **Feature 0:** [The full website is responsive for all devices.]
 - **Feature 1:** [You can view the feaured food items on the home page.]
 - **Feature 2:** [You can see all the available foods by clicking on the "View More Foods" button There you will see all the available foods.]
 - **Feature 3:** [If you need any food then you can select it and can have it by clicking on the "Have It" button.]

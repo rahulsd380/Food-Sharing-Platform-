@@ -25,6 +25,7 @@ import FoodRequest from './Components/FoodRequest/FoodRequest';
 import VolunteerApply from './Components/VolunteerApply/VolunteerApply';
 import VolunteeresInfo from './Components/Volunteers/VolunteeresInfo';
 import FeaturedFoodDetails from './Components/FeaturedFoods/FeaturedFoodDetails';
+import EditFood from './Components/ManageMyFood/EditFood';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -82,11 +83,11 @@ const router = createBrowserRouter([
         path : "volunteerInfo",
         element : <VolunteeresInfo></VolunteeresInfo>,
       },
-      // {
-      //   path : "aditionalFood/editFood/:id",
-      //   element : <EditFood></EditFood>,
-      //   loader : ({params}) => fetch(`https://food-sharing-server-three.vercel.app/aditional-foods/${params.id}`)
-      // },
+      {
+        path : "manageFood/editFood/:id",
+        element : <EditFood></EditFood>,
+        loader : ({params}) => fetch(`https://food-sharing-server-three.vercel.app/aditional-foods/${params.id}`)
+      },
 
       {
         path : "manageFood/singleFood/:id",

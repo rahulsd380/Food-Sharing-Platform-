@@ -8,7 +8,7 @@ const EditFood = () => {
     const food = useLoaderData()
     console.log(food);
 
-    const {_id, foodName, donarEmail,donarImage, email, expireDate, foodImage, location, notes,quantity} = food;
+    const {_id, amount, foodName, donarEmail, email, expireDate, foodImage, location, notes,quantity} = food;
 
 
 const handleUpdate = (e) => {
@@ -19,12 +19,12 @@ const handleUpdate = (e) => {
     const location = e.target.location.value;
     const expireDate = e.target.expireDate.value;
     const notes = e.target.notes.value;
-    const donarName = e.target.donarName.value;
+    // const donarName = e.target.donarName.value;
     const donarEmail = e.target.donarEmail.value;
     const amount = e.target.amount.value;
     const reqDate = e.target.reqDate.value;
 
-    const allData = { foodName, foodImage, quantity, location, expireDate, notes, donarName,amount,reqDate, donarEmail};
+    const allData = { foodName, foodImage, quantity, location, expireDate, notes,amount,reqDate, donarEmail};
 
     const toastId = toast.loading("Updating...")
     
@@ -72,7 +72,7 @@ const handleUpdate = (e) => {
                     </div>
                     <div>
                         <h1 className="font-semibold mb-2 text-left text-gray-500">Food Image URL</h1>
-                        <input type="text" name="foodImage"  className="border border-blue-300 p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out"/>
+                        <input defaultValue={foodImage} type="text" name="foodImage"  className="border border-blue-300 p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out"/>
                     </div>
                 </div>
 
@@ -92,11 +92,11 @@ const handleUpdate = (e) => {
             <div className="grid md:grid-cols-2 gap-8 mb-2">
                     <div>
                         <h1 className="font-semibold mb-2 text-left text-gray-500">Food Donator Email</h1>
-                        <input type="text" name="donarEmail" placeholder="bnb@gmail.com" className="border border-blue-300 p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out"/>
+                        <input defaultValue={donarEmail} type="text" name="donarEmail" placeholder="bnb@gmail.com" className="border border-blue-300 p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out"/>
                     </div>
                     <div>
                         <h1 className="font-semibold mb-2 text-left text-gray-500">User Email</h1>
-                        <input type="text" name="chef" placeholder="rahul@gmail.com" className="border border-blue-300 p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out"/>
+                        <input defaultValue={email} type="text" name="chef" placeholder="rahul@gmail.com" className="border border-blue-300 p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out"/>
                     </div>
                 </div>
 
@@ -108,7 +108,7 @@ const handleUpdate = (e) => {
                     </div>
                     <div>
                         <h1 className="font-semibold mb-2 text-left text-gray-500">Pickup Location</h1>
-                        <input type="text" name="location" className="border border-blue-300 p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out"/>
+                        <input defaultValue={location} type="text" name="location" className="border border-blue-300 p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out"/>
                     </div>
                 </div>
 
@@ -116,11 +116,11 @@ const handleUpdate = (e) => {
             <div className="grid md:grid-cols-2 gap-8 mb-2">
                     <div>
                         <h1 className="font-semibold mb-2 text-left text-gray-500">Expire Date</h1>
-                        <input type="text" name="expireDate"  className="border border-blue-300 p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out"/>
+                        <input defaultValue={expireDate} type="text" name="expireDate"  className="border border-blue-300 p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out"/>
                     </div>
                     <div>
                         <h1 className="font-semibold mb-2 text-left text-gray-500">Donation Amount</h1>
-                        <input type="text" name="amount" placeholder="Enter Amount" className="border border-blue-300 p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out text-gray-700" />
+                        <input defaultValue={amount} type="text" name="amount" placeholder="Enter Amount" className="border border-blue-300 p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out text-gray-700" />
 
                     </div>
                 </div>
@@ -129,11 +129,11 @@ const handleUpdate = (e) => {
             <div className="grid md:grid-cols-2 gap-8 mb-2">
                     <div>
                         <h1 className="font-semibold mb-2 text-left text-gray-500">Aditional Notes</h1>
-                        <input type="text" name="notes" className="border border-blue-300 p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out text-gray-600" />
+                        <input defaultValue={notes} type="text" name="notes" className="border border-blue-300 p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out text-gray-600" />
                     </div>
                     <div>
                         <h1 className="font-semibold mb-2 text-left text-gray-500">Quantity</h1>
-                        <input type="text" name="quantity" className="border border-blue-300 p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out"/>
+                        <input defaultValue={quantity} type="text" name="quantity" className="border border-blue-300 p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out"/>
                     </div>
                 </div>
 

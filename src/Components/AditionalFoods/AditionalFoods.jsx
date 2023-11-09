@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { BiSortDown } from "react-icons/bi";
-import Navbar2 from "../Navbar/Navbar2";
 import AditionalFoodCard from "./AditionalFoodCard";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import NewNavbar from "../NewNavbar/NewNavbar";
 
 
 const AditionalFoods = () => {
@@ -17,7 +17,7 @@ const AditionalFoods = () => {
     }, [url])
     return (
         <div>
-            <Navbar2></Navbar2>
+            <NewNavbar></NewNavbar>
             <div className="max-w-7xl mx-auto flex justify-between items-center mt-10">
                 <h1 className="text-2xl font-semibold"><span className="text-blue-800 font-bold">Available Foods :</span> {aditionalFoods.length}</h1>
                 <div className="">
